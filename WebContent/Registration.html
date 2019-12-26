@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Register</title>
+	
+	<style>
+		.green {
+			background-color: darkslategrey;
+		}
+		
+		.full-height {
+			height: auto;
+		}
+		
+		.white {
+			color: white;
+		}
+		.m-l-33 {
+			margin-left: 33%;
+		}
+		.m-l-23 {
+			margin-left: 23%;
+		}
+		.m-t-40 {
+			margin-top: 40%;
+		}
+		.m-t-5 {
+			margin-top: 5%;
+		}
+		.m-t-3 {
+			margin-top: 3%;
+		}
+		.m-b-2 {
+			margin-bottom: 2%;
+		}
+		/* Style the tab */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+		  background-color: inherit;
+		  float: left;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 16px;
+		  transition: 0.3s;
+		  font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+		  background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+		  background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+		  display: none;
+		  padding: 6px 12px;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+		
+		
+		.container {
+  padding: 16px;
+}
+form {border: 3px solid #f1f1f1;}
+input[type=text], input[type=password], input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+}
+.login {
+width: 40%;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+ margin-top: 6%;
+}
+
+	</style>
+  </head>
+  <body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<div class="container-fluid full-height">
+	<div class="row">
+		<div class="col-sm-5 green full-height">
+			<h1 class="white m-l-33 m-t-40">Team 11</h1><br><br>
+			<h3 class="white m-l-23">Online Quiz System</h3>
+		</div>
+		<div class="col-sm-7 full-height">
+			<div class="tab m-t-5">
+				<button class="tablinks" onclick="openCity(event, 'Student')" id="defaultOpen" style="color: black">Student</button>
+				<button class="tablinks" onclick="openCity(event, 'Professor')" style="color: black">Professor</button>
+			</div>
+
+<div id="Student" class="tabcontent">
+  <center><h3 class="m-t-3">Register As Student:</h3></center>
+    <!-- Moving to LoginPage.java to store the data of student details -->
+  <form action="register" class="m-t-3" method="get">
+	<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" maxlength="15" id="idstudusername" required>
+	
+	<label for="uemail"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="uemail" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="idpwd" required>
+	
+	<label for="psw"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="upsw" id="idcnfrmpwd" required>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button class="m-t-5 m-b-2 login" type="submit" name="submit" value="1" id="studsubmit" onclick="validatecnfrmpwd()">Register</button>
+	<span class="psw"><a href="index.html">Already registered? Click here to Login</a></span>
+  </div>
+  </form>
+</div>
+
+<div id="Professor" class="tabcontent">
+  <center><h3 class="m-t-3">Register As Professor:</h3></center>
+    <!-- Moving to LoginPage.java to store the data of Professor details -->
+  <form action="register" class="m-t-3" method="get">
+	<div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" maxlength="15" id="idprofusername" required>
+	
+	<label for="uemail"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="uemail" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="idpwd"required>
+	
+	<label for="psw"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw" id="idcnfrmpwd" required>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button class="m-t-5 m-b-2 login loginbtn" type="submit" value="2" name="submit" id="profsubmit" onclick="validatecnfrmpwd()">Register</button>
+	<span class="psw"><a href="index.html">Already registered? Click here to Login</a></span>
+  </div>
+  </form> 
+</div>
+
+<script>
+function validatecnfrmpwd() {
+	var password = document.getElementById("idpwd").value;
+	    var confirmPassword = document.getElementById("idcnfrmpwd").value;
+	    var usernamelength = document.getElementById("idprofusername").value;
+	    var usernamelength1 = document.getElementById("idstudusername").value;
+	    if(usernamelength>=15 || usernamelength1>=15) {
+	     document.getElementById("maxlengthpara").innerHTML = "Max Length of 15 reached";
+	      window.location("register.html");
+	     document.getElementById("profsubmit").value = 0;
+	        document.getElementById("studsubmit").value = 0;
+	    }
+	    if (password != confirmPassword) {
+	        alert("Passwords do not match.");
+	        window.location("register.html");
+	        document.getElementById("profsubmit").value = 0;
+	        document.getElementById("studsubmit").value = 0;
+	        return false;
+	       
+	    }
+	    return true;
+	}
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+		</div>
+	</div>
+	</div>
+  </body>
+</html>
